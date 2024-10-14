@@ -23,26 +23,35 @@ if($password !==$comfirm_password) {
 $hashed_password= password_hash($password, PASSWORD_DEFAULT);
 
 //verifier si l'utilisateur existe deja
-$sqlQuery = 'SELECT * FROM users WHERE Email '= $email;
+$sqlQuery = 'SELECT * FROM users WHERE email = :email';
+$selectUserByEmail = $mysqlClient->prepare($sqlQuery);
+$selectUserByEmail->bindParam(':email', $email);
+$selectUserByEmail->execute();
+$user = $selectUserByEmail->fetch(PDO::FETCH_ASSOC);
 
-// requette de preparation et execution de requette d'insertion
-$sqlQuery = 'INSERT INTO users(full_name, email, password, age) VALUES (:full_name, :email, :password, :age)';
 
-//preparation
-$insertInfo = $mysqlClient->prepare($sqlQuery);
+if(!$user){
 
-//binding parameter
-$insertInfo-> bindParam(':full_name', $username);
-$insertInfo-> bindParam(':email', $email);
-$insertInfo-> bindParam(':password', $hashed_password);
-$insertInfo-> bindParam(':age', $age);
-
-//execution
-if($insertInfo->execute()) {
-    echo "Inscription réussie !";
-
-    //redirection sur le page de connection
-    redirectToUrl('login.php');
+    $sqlQuery = 'INSERT INTO users(full_name, email, password, age) VALUES (:full_name, :email, :password, :age)';
+    
+    //preparation
+    $insertInfo = $mysqlClient->prepare($sqlQuery);
+    
+    //binding parameter
+    $insertInfo-> bindParam(':full_name', $username);
+    $insertInfo-> bindParam(':email', $email);
+    $insertInfo-> bindParam(':password', $hashed_password);
+    $insertInfo-> bindParam(':age', $age);
+    
+    //execution
+    if($insertInfo->execute()) {
+        echo "Inscription réussie !";
+        
+        //redirection sur le page de connection
+        redirectToUrl('login.php');
+    }
+}else {
+    echo "<p style='color:red;background-color:white;padding:10px'>L'utilisateur existe déjà.</p>";
 }
 
 ?>
