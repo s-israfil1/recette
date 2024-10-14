@@ -5,33 +5,6 @@ require_once(__DIR__ . '/variables.php');
 require_once(__DIR__ . '/functions.php');
 require_once(__DIR__ . '/login.php');
 
-/**
-* On ne traite pas les super globales provenant de l'utilisateur directement,
-* ces données doivent être testées et vérifiées.
-*/
-/*
-//nom du serveur
-$servername = 'localhost';
-$username ='full_name';
-$email = 'email';
-$password ='password';
-$age = 'age';
-//nom de la base de donnee
-$dbname = 'partage_de_recettes';
-//creer la connexion
-$conn = new $mysqlClient($servername,$email,$password, $dbname);
-//verifier la connexion
-if($conn->connect_error) {
-    die('Echec de la connexion: ' . $conn->connect_error);
-}
-*/
-
-try {
-    $mysqlClient = new PDO('msql:host=localhost;dbname=partage_de_recettes;charset=utf8', 'root', 'root');
-} catch(Exception $e) {
-    die('Erreur: ' . $e->getMessage());
-}
-
 $postData = $_POST;
 
 //recuperer les donnees du formulaire
@@ -49,30 +22,27 @@ if($password !==$comfirm_password) {
 //hachage du mot de passe
 $hashed_password= password_hash($password, PASSWORD_DEFAULT);
 
-//preparation et execution de requette d'insertion
+//verifier si l'utilisateur existe deja
+$sqlQuery = 'SELECT * FROM users WHERE Email '= $email;
+
+// requette de preparation et execution de requette d'insertion
 $sqlQuery = 'INSERT INTO users(full_name, email, password, age) VALUES (:full_name, :email, :password, :age)';
 
-//prepa
+//preparation
 $insertInfo = $mysqlClient->prepare($sqlQuery);
 
+//binding parameter
+$insertInfo-> bindParam(':full_name', $username);
+$insertInfo-> bindParam(':email', $email);
+$insertInfo-> bindParam(':password', $hashed_password);
+$insertInfo-> bindParam(':age', $age);
+
 //execution
-if ($insertInfo->execute()) {
+if($insertInfo->execute()) {
     echo "Inscription réussie !";
 
     //redirection sur le page de connection
     redirectToUrl('login.php');
 }
 
-/*
-if($stmt->execute()){
-    echo 'Insription réussie !';
-} else {
-    echo 'Erreur : ' . $stmt->error;
-
-    //Fermeture des connexions
-    $stmt->close();
-    $conn->close();
-}
-*/
-  
 ?>

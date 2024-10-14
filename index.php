@@ -23,7 +23,7 @@ require_once(__DIR__ . '/functions.php');
     <div class="container">
         <!-- inclusion de l'entête du site -->
         <?php require_once(__DIR__ . '/header.php'); ?>
-        <h1>Site de recettes</h1>
+        <h1>SAVEURS DU MONDE</h1>
 
         <!-- Formulaire de connexion -->
         <?php require_once(__DIR__ . '/login.php'); ?>

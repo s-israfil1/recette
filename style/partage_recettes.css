@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+}
+
+.body_register {
+    background-image: url("../images/register1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 160px 0px 16px 0px;
+    text-align: center;
+}
+
+span {
+    color: yellow;
+    font-size: 1.6em;
+}
+
+h1 {
+    color: white;
+}
+
+.titleheader_register {
+    padding: 26px 0px 26px 0px;
+}
+
+.txt_register {
+    color: white;
+    text-align: center;
+    font-size: 1.36em;
+    padding: 36px 0px 36px 0px;
+}
+
+.sectionregister1 {
+    /*background-color: white;*/
+    display: flex;
+    justify-content: center;
+    padding: 66px 0px 36px 0px;
+}
+
+.form_register {
+    font-size: 1.16em;
+    background-image: url("../images/register2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    box-shadow: 2.6px 2.6px 16.66px white;
+    width: 100%;
+    max-width: 400px;
+    padding: 36px 16px 26px 16px;
+}
+
+h5 {
+    font-size: 1.6em;
+    color: yellow;
+}
+
+.champs_register:placeholder-shown {
+    color: rgb(139, 138, 138);
+}
+
+.champs_register {
+    color: black;
+    background-color: white;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 366px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: none;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
+.formgroup_register {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+}
+
+.bouton_register {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sectionregister2 {
+    display: flex;
+    justify-content: center;
+    padding: 6px 0px 16px 0px;
+}
+
+.redirect {
+    width: 100%;
+    max-width: 400px;
+}
+
+.txtredirect {
+    color: white;
+    font-size: 1.3em;
+}
+
+.boutonredirect {
+    color: black;
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 6px 16px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boiteredirect {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+}
+
+.titleheader_login {
+    padding: 26px 0px 26px 0px;
+}
+
+.body_login {
+    background-image: url("../images/register2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 160px 0px 16px 0px;
+    text-align: center;
+}
+
+.txt_login {
+    color: white;
+    text-align: center;
+    font-size: 1.36em;
+    padding: 36px 0px 36px 0px;
+}
+
+.sectionlogin {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 36px 0px;
+}
+
+.form_login {
+    color: white;
+    font-size: 1.16em;
+    background-image: url("../images/register1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-color: brown;*/
+    border-radius: 6px;
+    box-shadow: 2.6px 2.6px 26px black;
+    width: 100%;
+    max-width: 400px;
+    padding: 36px 16px 26px 16px;
+}
+
+.champs_login:placeholder-shown {
+    color: rgb(139, 138, 138);
+}
+
+.champs_login {
+    color: black;
+    background-color: white;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 366px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: none;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
+.formgroup_login {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+}
+
+.bouton_login {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.title_contact {
+    background-color: green;
+}
+
+.sectioncontact {
+    background-color: aqua;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
