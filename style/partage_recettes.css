@@ -2,12 +2,18 @@
     margin: 0;
 }
 
+.baschamps {
+    font-size: 0.86em;
+    font-style: italic;
+}
+
 .body_register {
-    background-image: url("../images/register1.jpg");
+    background-image: url("../images/register.jpg");
+    /*background-color: rgb(35, 46, 54);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 160px 0px 16px 0px;
+    padding: 136px 0px 0px 0px;
     text-align: center;
 }
 
@@ -39,12 +45,13 @@ h1 {
 }
 
 .form_register {
-    font-size: 1.16em;
-    background-image: url("../images/register2.jpg");
+    color: white;
+    font-size: 1.26em;
+    /*background-image: url("../images/register2.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     border-radius: 6px;
-    box-shadow: 2.6px 2.6px 16.66px white;
+    box-shadow: 3.6px 3.6px 16.66px yellow;
     width: 100%;
     max-width: 400px;
     padding: 36px 16px 26px 16px;
@@ -69,7 +76,7 @@ h5 {
     height: 26px;
     /* Hauteur fixe pour les champs de texte */
     padding: 10px;
-    border: none;
+    border: 1px solid yellow;
     border-radius: 3.66px;
     font-size: 16px;
 }
@@ -92,7 +99,7 @@ h5 {
 .sectionregister2 {
     display: flex;
     justify-content: center;
-    padding: 6px 0px 16px 0px;
+    padding: 6px 0px 36px 0px;
 }
 
 .redirect {
@@ -127,10 +134,11 @@ h5 {
 }
 
 .body_login {
-    background-image: url("../images/register2.jpg");
+    background-image: url("../images/register.jpg");
+    /*background-color: rgb(44, 48, 58);*/
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 160px 0px 16px 0px;
+    padding: 136px 0px 0px 0px;
     text-align: center;
 }
 
@@ -149,13 +157,12 @@ h5 {
 
 .form_login {
     color: white;
-    font-size: 1.16em;
-    background-image: url("../images/register1.jpg");
+    font-size: 1.26em;
+    /*background-image: url("../images/register1.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    /*background-color: brown;*/
+    background-repeat: no-repeat;*/
     border-radius: 6px;
-    box-shadow: 2.6px 2.6px 26px black;
+    box-shadow: 3.6px 3.6px 16.6px yellow;
     width: 100%;
     max-width: 400px;
     padding: 36px 16px 26px 16px;
@@ -175,7 +182,7 @@ h5 {
     height: 26px;
     /* Hauteur fixe pour les champs de texte */
     padding: 10px;
-    border: none;
+    border: 1px solid yellow;
     border-radius: 3.66px;
     font-size: 16px;
 }
@@ -196,12 +203,278 @@ h5 {
 }
 
 .title_contact {
-    background-color: green;
+    /*background-color: green;*/
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+h2 {
+    color: yellow;
+    font-size: 3.6em;
+}
+
+.body_contact {
+    background-image: url("../images/login.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maincontact {
+    padding: 20px 0px 20px 0px;
+}
+
+.form_contact {
+    color: white;
+    font-size: 1.26em;
+    /*background-color: violet;*/
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 3.6px 3.6px 16.6px yellow;
+    width: 100%;
+    max-width: 560px;
+    padding: 36px 16px 26px 16px;
 }
 
 .sectioncontact {
-    background-color: aqua;
-    padding: 20px;
+    /*background-color: white;*/
     display: flex;
     justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.formgroup_contact {
+    margin: 6px 0px 16px 0px;
+    padding: 3.6px;
+}
+
+.champs_contact1 {
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 506px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
+.textera_contact {
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 506px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 136px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    resize: none;
+    /* Empêche le redimensionnement */
+}
+
+.champs_contact2 {
+    background-color: white;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 506px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    /*border: none;*/
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
+.bouton_contact {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.body_ajoutrec {
+    background-image: url("../images/farftrfg.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title_ajoutrec {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_ajoutrec {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.form_ajoutrec {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 886px;
+    padding: 36px 16px 26px 16px;
+}
+
+.formgroup_ajoutrec {
+    margin: 6px 0px 16px 0px;
+    padding: 6px;
+}
+
+.champs_ajoutrec {
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 536px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
+.textera_ajoutrec {
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 866px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 266px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.bouton_ajoutrec {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.body_submitcont {
+    background-image: url("../images/login.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title_submitcont {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.boite-submitcont {
+    color: white;
+    font-size: 1.36em;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 600px;
+    padding: 36px 6px 26px 6px;
+}
+
+.section-submitcon {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.txt_submitcont {
+    padding: 20px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+.ff {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+    height: 50px;
+}
+
+.section_footer {
+    background-color: rgba(255, 255, 255, 0.315);
+    font-size: 1.26em;
+    text-align: center;
+    width: 100%;
+    max-width: 366px;
+    height: 36px;
+    padding: 10px 0px 3.6px 0px;
+    border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+}
+
+.nav_header {
+    /*background-color: brown;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 20px 26px 20px;
+}
+
+.logo_head {
+    font-size: 1.6em;
+    /*background-color: green;*/
+    text-align: center;
+    width: 43.6%;
+    padding: 26px 0px 26px 0px;
+}
+
+.lien_header {
+    /*background-color: violet;*/
+    display: flex;
+    justify-content: space-around;
+    width: 53.6%;
+    padding: 26px 0px 26px 0px;
+}
+
+.liennav {
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.356);
+    font-size: 1.16em;
+    text-decoration: none;
+    margin-top: 26px;
+    padding: 10px 16.6px 10px 16.6px;
+    border-radius: 16px 0px 16px 0px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+}
+
+.liendecnav {
+    color: yellow;
+    background-color: rgba(255, 0, 0, 0.603);
+    font-size: 1.16em;
+    text-decoration: none;
+    margin-top: 26px;
+    padding: 10px 16.6px 10px 16.6px;
+    border-radius: 3.6px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+}
+
+.body_index {
+    background-color: rgb(56, 47, 138);
+}
+
+.body_postcreate {
+    background-color: green;
 }
