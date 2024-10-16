@@ -38,6 +38,12 @@
                                     <?php echo $_SESSION['LOGIN_ERROR_MESSAGE'];
                                     unset($_SESSION['LOGIN_ERROR_MESSAGE']); ?>
                                 </div>
+                                <?php else : ?>
+                        <div class="alert alert-success" role="alert">
+                        <?php if (isset($_SESSION['LOGGED_USER']['email'])) : ?>
+                            Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
+                            <?php endif; ?>
+                        </div>
                                 <?php endif; ?>
                             <div class="formgroup_login">
                                 <label for="email">Email</label>
@@ -53,16 +59,15 @@
                             </div>
                         </form>
                             <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
-                            <?php else : ?>
-                        <div class="alert alert-success" role="alert">
-                            Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
-                        </div>
+
+                        
                     </div>
                 </section>
             </main>
             <footer>
                 <!-- inclusion du bas de page du site -->
                 <?php require_once(__DIR__ . '/footer.php'); ?>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, minus? Corrupti praesentium dolor mollitia dignissimos reprehenderit modi sunt laboriosam doloremque, neque rem sed earum, magni unde eaque ad obcaecati quos.
             </footer>
         </body>
     </html>
