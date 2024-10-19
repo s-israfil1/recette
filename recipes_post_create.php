@@ -43,12 +43,9 @@ $insertRecipe->execute([
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Recettes - Création de recette</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="body_postcreate">
     <div class="container">
 
         <?php require_once(__DIR__ . '/header.php'); ?>

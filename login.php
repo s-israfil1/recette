@@ -1,3 +1,4 @@
+
 <!--
    Si utilisateur/trice est non identifié(e), on affiche le formulaire
 -->
@@ -48,7 +49,7 @@
                             <div class="formgroup_login">
                                 <label for="email">Email</label>
                                 <input type="email"  id="email" class="champs_login" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
-                                <div id="email-help" class="form-text">L'email utilisé lors de la création de compte.</div>
+                                <div id="email-help" class="baschamps">L'email utilisé lors de la création de compte.</div>
                             </div>
                             <div class="formgroup_login">
                                 <label for="password">Mot de passe</label>
