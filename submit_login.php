@@ -20,10 +20,13 @@ if (isset($postData['email']) &&  isset($postData['password'])) {
         foreach ($users as $user) {
             if (
                 $user['email'] === $postData['email'] &&
-                $user['password'] === $postData['password']
+                password_verify($postData['password'],$user['password'])
+                /*$user['password'] === $postData['password']*/
+                
             ) {
                 $_SESSION['LOGGED_USER'] = [
                     'email' => $user['email'],
+                    'name' => $user['full_name'],
                     
                     'user_id' => $user['user_id'],
                 ];

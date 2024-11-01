@@ -45,23 +45,26 @@ $insertRecipe->execute([
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Recettes - Création de commentaire</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <div class="container">
-
-    <?php require_once(__DIR__ . '/header.php'); ?>
-        <h1>Commentaire ajouté avec succès !</h1>
-
-        <div class="card">
-            <div class="card-body">
-                <p class="card-text"><b>Votre commentaire</b> : <?php echo strip_tags($comment); ?></p>
-            </div>
+<body class="body_pcreatecom">
+    <header>
+        <?php require_once(__DIR__ . '/header.php'); ?>
+    </header>
+    <main>
+        <div class="title_pcreatecom">
+            <h2>Commentaire ajouté avec succès !</h2>
         </div>
-    </div>
-    <?php require_once(__DIR__ . '/footer.php'); ?>
+        <section class="section_pcreatecom">
+            <div class="form_pcreatecom">
+                <div class="formgroup_pcreatecom">
+                    <p class="card-text"><b>Votre commentaire</b> : <?php echo strip_tags($comment); ?></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <?php require_once(__DIR__ . '/footer.php'); ?>
+    </footer>
 </body>
 </html>

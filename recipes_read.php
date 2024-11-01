@@ -33,7 +33,9 @@ if ($recipeWithComments === []) {
 $recipe = [
     'recipe_id' => $recipeWithComments[0]['recipe_id'],
     'title' => $recipeWithComments[0]['title'],
+    'origin' => $recipeWithComments[0]['origin'],
     'recipe' => $recipeWithComments[0]['recipe'],
+    'image' => $recipeWithComments[0]['image'],
     'author' => $recipeWithComments[0]['author'],
     'comments' => [],
 ];
@@ -56,46 +58,87 @@ foreach ($recipeWithComments as $comment) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Recettes - <?php echo($recipe['title']); ?></title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <title>Site de Recettes - Recette<?php echo($recipe['title']); ?></title>
+    <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <div class="container">
-
+<body class="body_recread">
+    <header>
         <?php require_once(__DIR__ . '/header.php'); ?>
-        <h1><?php echo($recipe['title']); ?></h1>
-        <div class="row">
-            <article class="col">
-                <?php echo($recipe['recipe']); ?>
+    </header>
+    <main>
+        <div class="title_recread1">
+            <h2><?php echo($recipe['title']); ?></h2>
+        </div>
+        <section class="section_recread0">
+            <article>
+                <?php 
+                $image_name = $recipe['image'];
+                $image_path = 'uploads/' . $image_name;
+                
+                ?>
+                <img src="<?php echo htmlspecialchars($image_path); ?>"/>
             </article>
-            <aside class="col">
-                <p><i>Contribuée par <?php echo($recipe['author']); ?></i></p>
-            </aside>
-        </div>
-        <hr />
-        <h2>Commentaires</h2>
-        <?php if ($recipe['comments'] !== []) : ?>
-        <div class="row">
-            <?php foreach ($recipe['comments'] as $comment) : ?>
-                <div class="comment">
-                    <p><?php echo $comment['comment']; ?></p>
-                    <i>(<?php echo $comment['full_name']; ?>)</i>
+            <article>
+                <?php echo($recipe['origin']); ?>
+            </article>
+        </section>
+        <section class="section_recread1">
+            <div class="boite_recread1">
+                <article class="formgroup_recread">
+                    <?php echo($recipe['recipe']); ?>
+                </article>
+                <aside class="formgroup_recread">
+                    <p><i>Contribuée par <?php echo($recipe['author']); ?></i></p>
+                </aside>
+            </div>
+        </section>
+        <section class="section_recread2">
+            <div>
+                <p>
+                    Pour nous contacter, cliquez sur le lien ci-dessous :
+                </p>
+            </div>
+            <div>
+                <a href="mailto:<?php echo($recipe['author']); ?>?subject=Partage de recette&body=Bonjour,%0A%0A">
+                    Envoyer un  email
+                </a>
+            </div>
+        </section>
+        <section class="section_recread2">
+            <div class="title_recread2">
+                <h3>COMMENTAIRES...</h3>
+            </div>
+            <div class="boite_recread2">
+                <?php if ($recipe['comments'] !== []) : ?>
+                <div class="boite_recread3">
+                    <?php foreach ($recipe['comments'] as $comment) : ?>
+                        <ul>
+                            <li>
+                                <div class="commentaire">
+                                <p><?php echo $comment['comment']; ?></p>
+                                <i>(<?php echo $comment['full_name']; ?>)</i>
+                                </div>
+                            </li>
+                        </ul>
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
-        </div>
-        <?php else : ?>
-        <div class="row">
-            <p>Aucun commentaire</p>
-        </div>
-        <?php endif; ?>
-        <hr />
-        <?php if (isset($_SESSION['LOGGED_USER'])) : ?>
-            <?php require_once(__DIR__ . '/comments_create.php'); ?>
-        <?php endif; ?>
-    </div>
-    <?php require_once(__DIR__ . '/footer.php'); ?>
+                <?php else : ?>
+                <ul>
+                    <li>
+                        <p class="alt_comm">Aucun commentaire</p>
+                    </li>
+                </ul>
+                <?php endif; ?>
+            </div>
+        </section>
+        <section class="section_recread3">
+            <?php if (isset($_SESSION['LOGGED_USER'])) : ?>
+                        <?php require_once(__DIR__ . '/comments_create.php'); ?>
+                    <?php endif; ?>
+            </section>
+    </main>
+    <footer>
+        <?php require_once(__DIR__ . '/footer.php'); ?>
+    </footer>
 </body>
 </html>

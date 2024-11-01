@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: Manrope;
 }
 
 .baschamps {
@@ -19,10 +20,12 @@
 
 span {
     color: yellow;
-    font-size: 1.6em;
+    font-size: 1.86em;
+    font-family: Kablammo;
 }
 
 h1 {
+    font-family: Kablammo;
     color: white;
 }
 
@@ -32,6 +35,7 @@ h1 {
 
 .txt_register {
     color: white;
+    /*background: linear-gradient(155deg, rgba(0, 0, 0, 0.616), rgba(255, 255, 255, 0.575));*/
     text-align: center;
     font-size: 1.36em;
     padding: 36px 0px 36px 0px;
@@ -138,12 +142,14 @@ h5 {
     /*background-color: rgb(44, 48, 58);*/
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 136px 0px 0px 0px;
     text-align: center;
 }
 
 .txt_login {
     color: white;
+    /*background: linear-gradient(155deg, rgba(0, 0, 0, 0.616), rgba(255, 255, 255, 0.575));*/
     text-align: center;
     font-size: 1.36em;
     padding: 36px 0px 36px 0px;
@@ -152,7 +158,7 @@ h5 {
 .sectionlogin {
     display: flex;
     justify-content: center;
-    padding: 60px 0px 36px 0px;
+    padding: 60px 0px 60px 0px;
 }
 
 .form_login {
@@ -210,6 +216,7 @@ h5 {
 
 h2 {
     color: yellow;
+    background: linear-gradient(155deg, rgba(0, 0, 0, 0.616), rgba(255, 255, 255, 0.575));
     font-size: 3.6em;
 }
 
@@ -218,6 +225,7 @@ h2 {
     /*background-color: rgb(44, 48, 58);*/
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .maincontact {
@@ -278,6 +286,7 @@ h2 {
 }
 
 .champs_contact2 {
+    color: #123;
     background-color: white;
     width: 100%;
     /* Fixe la largeur des champs à 100% de leur conteneur */
@@ -302,10 +311,11 @@ h2 {
 }
 
 .body_ajoutrec {
-    background-image: url("../images/farftrfg.jpg");
+    background-image: url("../images/ok.jpg");
     /*background-color: rgb(44, 48, 58);*/
     background-size: cover;
     background-repeat: no-repeat;
+    /*background-position: center;*/
 }
 
 .title_ajoutrec {
@@ -320,7 +330,7 @@ h2 {
 }
 
 .form_ajoutrec {
-    color: white;
+    color: #123;
     background-color: rgba(0, 0, 0, 0.11);
     font-size: 1.26em;
     text-align: center;
@@ -336,7 +346,7 @@ h2 {
     padding: 6px;
 }
 
-.champs_ajoutrec {
+.champs_ajoutrec1 {
     width: 100%;
     /* Fixe la largeur des champs à 100% de leur conteneur */
     max-width: 536px;
@@ -346,10 +356,37 @@ h2 {
     padding: 10px;
     border: 1px solid yellow;
     border-radius: 3.66px;
-    font-size: 16px;
+    font-size: 16.6px;
 }
 
-.textera_ajoutrec {
+.select_ajoutrec {
+    font-size: 16.6px;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 560px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 50px;
+    /* Hauteur fixe pour les champs de texte */
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+}
+
+.textera_ajoutrec1 {
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 666px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 136.6px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    margin-bottom: 6px;
+    font-size: 16.6px;
+    resize: none;
+}
+
+.textera_ajoutrec2 {
     width: 100%;
     /* Fixe la largeur de la zone de texte à 100% de son conteneur */
     max-width: 866px;
@@ -363,12 +400,28 @@ h2 {
     font-size: 16px;
 }
 
+.champs_ajoutrec2 {
+    background-color: white;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 506px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    /*border: none;*/
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16px;
+}
+
 .bouton_ajoutrec {
+    color: black;
     background-color: yellow;
     border-radius: 50px 50px 50px 50px;
-    border: none;
+    border: 2.6px solid white;
     padding: 16px 36px;
-    font-size: 16px;
+    font-size: 16.6px;
     cursor: pointer;
 }
 
@@ -377,6 +430,7 @@ h2 {
     /*background-color: rgb(44, 48, 58);*/
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .title_submitcont {
@@ -386,6 +440,7 @@ h2 {
 
 .boite-submitcont {
     color: white;
+    background-color: rgba(0, 0, 0, 0.185);
     font-size: 1.36em;
     text-align: center;
     border-radius: 60px;
@@ -434,11 +489,12 @@ h2 {
 }
 
 .logo_head {
+    font-family: Kablammo;
     font-size: 1.6em;
     /*background-color: green;*/
     text-align: center;
     width: 43.6%;
-    padding: 26px 0px 26px 0px;
+    padding: 6px 0px 26px 0px;
 }
 
 .lien_header {
@@ -462,7 +518,7 @@ h2 {
 
 .liendecnav {
     color: yellow;
-    background-color: rgba(255, 0, 0, 0.603);
+    background-color: red;
     font-size: 1.16em;
     text-decoration: none;
     margin-top: 26px;
@@ -471,10 +527,559 @@ h2 {
     box-shadow: 1.6px 1.6px 0px yellow;
 }
 
-.body_index {
-    background-color: rgb(56, 47, 138);
+.body_postcreate {
+    background-image: url("../images/ok.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.body_postcreate {
-    background-color: green;
+.title_postcreate {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_postcreate {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.boite_postecreate {
+    color: white;
+    background-color: rgba(17, 34, 51, 0.356);
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 3.6px 3.6px 0px yellow;
+    width: 100%;
+    max-width: 886.6px;
+    padding: 36px 0px 26px 0px;
+}
+
+.txt_postcreate {
+    font-size: 1.26em;
+    padding: 20px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+b {
+    color: rgb(172, 247, 24);
+    font-size: 1.36em;
+}
+
+.body_update {
+    background-image: url("../images/prem.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title_update {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_update {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.form_update {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 886px;
+    padding: 36px 6px 26px 6px;
+}
+
+.formgroup_update {
+    margin: 6px 0px 16px 0px;
+    padding: 6px 0px 6px 0px;
+}
+
+.bouton_update {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.champs_update1 {
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 536px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16.6px;
+}
+
+.champs_update2 {
+    color: #123;
+    background-color: white;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 536px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 26px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    font-size: 16.6px;
+}
+
+.textera_update {
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 866px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 266px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.select_update {
+    font-size: 16.6px;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 560px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 50px;
+    /* Hauteur fixe pour les champs de texte */
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+}
+
+.body_postupdate {
+    background-image: url("../images/prem.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title_postupdate {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_postupdate {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.boite_postupdate {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.199);
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 3.6px 3.6px 16.6px yellow;
+    width: 100%;
+    max-width: 886.6px;
+    padding: 36px 0px 26px 0px;
+}
+
+.txt_postupdate {
+    font-size: 1.26em;
+    padding: 20px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+.body_delete {
+    background-image: url("../images/del.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title_delete {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_delete {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.form_delete {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 386px;
+    padding: 36px 16px 26px 16px;
+}
+
+.formgroup_delete {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+    padding: 6px;
+}
+
+.bouton_delete {
+    background-color: rgb(238, 30, 30);
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.body_pcreatecom {
+    background-image: url("../images/oui.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title_pcreatecom {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_pcreatecom {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.form_pcreatecom {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 1.26em;
+    text-align: justify;
+    border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 600px;
+    padding: 36px 0px 26px 0px;
+}
+
+.formgroup_pcreatecom {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+    padding: 6px 0px 6px 0px;
+}
+
+.body_recread {
+    background-image: url("../images/oui.jpg");
+    /*background-color: rgb(44, 48, 58);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.title_recread1 {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_recread0 {}
+
+.section_recread1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_recread2 {}
+
+.boite_recread1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.295);
+    font-size: 1.36em;
+    text-align: justify;
+    border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 886px;
+    padding: 36px 6px 26px 6px;
+}
+
+.formgroup_recread {
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+    padding: 6px 0px 6px 0px;
+}
+
+i {
+    color: yellow;
+    font-size: 0.86em;
+}
+
+h3 {
+    color: rgb(172, 247, 24);
+    font-size: 2.36em;
+    text-decoration: underline;
+}
+
+.title_recread2 {
+    text-align: center;
+    padding: 20px 666px 20px 0px;
+}
+
+.boite_recread2 {
+    padding: 16px 16px 16px 16px;
+}
+
+.commentaire {
+    color: white;
+    font-size: 1.26em;
+    margin: 6px 0px 6px 0px;
+    padding: 6px 6px 6px 6px;
+}
+
+.boite_recread3 {
+    background-color: rgba(17, 34, 51, 0.466);
+    border: 2.6px dotted rgb(172, 247, 24);
+    border-radius: 26px;
+    padding: 6px 6px 6px 6px;
+}
+
+.section_comcreate {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.form_comcreate {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 600px;
+    padding: 36px 0px 26px 0px;
+}
+
+.textera_comcreate {
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 386.6px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 66px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    resize: none;
+    border: 1px solid yellow;
+    border-radius: 3.66px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.formroup_comcreate {
+    font-size: 1.26em;
+    text-align: center;
+    /* Centre les éléments à l'intérieur de ce conteneur */
+    margin: 6px 0px 16px 0px;
+    padding: 6px 0px 6px 0px;
+}
+
+.bouton_comcreate {
+    background-color: yellow;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.body_index {
+    /*background-color: aqua;*/
+    background-image: url("../images/register2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.alt_comm {
+    color: white;
+    font-size: 1.26em;
+    text-decoration: underline;
+}
+
+.section_index1 {
+    background-color: rgba(0, 0, 0, 0.11);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.txt_index1 {
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.11);*/
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+    width: 100%;
+    max-width: 686.6px;
+    padding: 16px 16px 26px 16px;
+}
+
+.section_index2 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 36px 20px 36px;
+}
+
+.boite_index1 {
+    color: white;
+    /*background-color: rgba(0, 0, 0, 0.11);*/
+    font-size: 1.26em;
+    /*border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;*/
+    /*width: 100%;
+    max-width: 866px;*/
+    padding: 26px 6px 26px 6px;
+}
+
+.alert_success {
+    color: white;
+    font-size: 1.16em;
+    background-color: rgba(2, 153, 2, 0.233);
+    text-align: center;
+    padding: 16px 0px 16px 0px;
+    width: 100%;
+    max-width: 860px;
+    border-radius: 16px;
+    border: 6px double green;
+}
+
+.boite_alert {
+    display: flex;
+    justify-content: center;
+}
+
+.article_index {
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 50px;
+    margin: 6px 0px 16px 0px;
+    padding: 6px 6px 6px 6px;
+}
+
+.title_recipe {
+    text-align: center;
+    padding: 6px 0px 6px 0px;
+}
+
+.trecipe {
+    color: white;
+}
+
+.recipe {
+    font-size: 1.26em;
+    text-align: justify;
+    margin: 6px 0px 6px 0px;
+    padding: 6px 16px 6px 16px;
+}
+
+.author_recipe {
+    padding: 6px 0px 6px 86px;
+    margin: 6px 0px 6px 0px;
+}
+
+.action_recipe {
+    padding: 10px 66px 10px 66px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bouton_edit1 {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(137, 202, 6);
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    padding: 16px 36px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.formgroup_index {
+    padding: 10px 0px 10px 0px;
+}
+
+.bouton_edit2 {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(137, 202, 6);
+    border-radius: 50px 50px 50px 50px;
+    border: 3.6px solid red;
+    padding: 16px 36px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    color: orangered;
+    text-decoration: none;
+}
+
+.lienindex {
+    color: yellow;
+    background-color: rgba(255, 255, 255, 0.459);
+    font-size: 1.16em;
+    text-decoration: none;
+    margin-top: 26px;
+    padding: 10px 16.6px 10px 16.6px;
+    border-radius: 0px 16px 0px 16px;
+    box-shadow: 1.6px 1.6px 0px yellow;
+}
+
+.title_index {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.section_index0 {
+    background-color: white;
+    padding: 20px 0px 20px 0px;
+}
+
+.txt_index2 {
+    background-color: aqua;
+    font-size: 1.26em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    /*border-radius: 50px;
+    box-shadow: 1.6px 1.6px 0px yellow;*/
+    padding: 16px 16px 26px 16px;
+}
+
+.boite_index0 {
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: space-around;
+    padding: 26px 0px 26px 0px;
+    margin: 16px 0px 16px 0px;
 }

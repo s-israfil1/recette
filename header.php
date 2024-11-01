@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Recettes - Footer</title>
     <link href="style/partage_recettes.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
             <div class="lien_header" id="navbarSupportedContent">
                 
                 <div>
-                    <a class="liennav" aria-current="page" href="index.php">Home</a>
+                    <a class="liennav" aria-current="page" href="index.php">Accueil</a>
                 </div>
                 <div >
                     <a class="liennav" href="contact.php">Contact</a>

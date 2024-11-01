@@ -53,18 +53,30 @@
                                 <button type="submit" class="bouton_login">Connexion</button>
                             </div>
                         </form>
-                            <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
-                            <?php else : ?>
-                        <div class="alert alert-success" role="alert">
-                            Bonjour <?php echo $_SESSION['LOGGED_USER']['email']; ?> et bienvenue sur le site !
-                        </div>
                     </div>
+                </section>
+                <section class="sectionregister2">
+                        <div class="redirect">
+                            <div class="boiteredirect">
+                                <p class="txtredirect">Vous n'avez pas de <u>compte</u> ?</p>
+                            </div>
+                            <div class="boiteredirect">
+                                <a href="register.php" class="boutonredirect">Creer un compte ici</a>
+                            </div>
+                        </div>
                 </section>
             </main>
             <footer>
                 <!-- inclusion du bas de page du site -->
                 <?php require_once(__DIR__ . '/footer.php'); ?>
             </footer>
+                <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
+                <?php else : ?>
+                            <div class="boite_alert">
+                                <div class="alert_success" role="alert">
+                                    Bonjour <?php echo $_SESSION['LOGGED_USER']['name']; ?> et bienvenue dans votre espace culinaire !
+                                </div>
+                            </div>
+                <?php endif; ?>
         </body>
     </html>
-<?php endif; ?>

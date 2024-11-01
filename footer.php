@@ -12,7 +12,7 @@
     <footer class="ff">
         <section class="section_footer">
             © 2024 Copyright:
-            <a class="" href=""><em>Said-israfil</em></a>
+            <a class="copyright" href=""><em>Said-israfil</em></a>
         </section>
     </footer>
 </body>

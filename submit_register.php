@@ -15,8 +15,8 @@ $comfirm_password = $_POST['confirm_password'];
 $age = $_POST['age'];
 
 //validation simple
-if($password !==$comfirm_password) {
-    die('les mots de passe ne correspondent pas !');
+if($password !== $comfirm_password) {
+    die("<p style='color:red;background-color:white;padding:16px;border: 2.6px solid red;font-size: 1.26em;'>les mots de passe ne correspondent pas VEILLEZ VOUS REINSCRIRE !</p>");
 }
 
 //hachage du mot de passe
@@ -51,7 +51,7 @@ if(!$user){
         redirectToUrl('login.php');
     }
 }else {
-    echo "<p style='color:red;background-color:white;padding:10px'>L'utilisateur existe déjà.</p>";
+    echo "<p style='color:red;background-color:white;padding:16px;border: 2.6px solid red; font-size: 1.26em;'>L'utilisateur existe déjà !</p>";
 }
 
 ?>
