@@ -27,10 +27,17 @@ if (isset($postData['email']) &&  isset($postData['password'])) {
                 $_SESSION['LOGGED_USER'] = [
                     'email' => $user['email'],
                     'name' => $user['full_name'],
-                    
+                    'is_admin' => $user['is_admin'],
                     'user_id' => $user['user_id'],
                 ];
             }
+        }
+        
+        // verifier si l'utlisateur est admin
+        if ($_SESSION['LOGGED_USER']['is_admin'] === 1) {
+
+            //rediriger vers la page landing
+            redirectToUrl('landing.php');
         }
 
         if (!isset($_SESSION['LOGGED_USER'])) {
@@ -43,4 +50,6 @@ if (isset($postData['email']) &&  isset($postData['password'])) {
     }
 
     redirectToUrl('index.php');
+
 }
+

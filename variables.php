@@ -9,6 +9,9 @@ $recipesStatement = $mysqlClient->prepare('SELECT * FROM recipes WHERE is_enable
 $recipesStatement->execute();
 $recipes = $recipesStatement->fetchAll();
 
+$commentsStatement = $mysqlClient->prepare('SELECT * FROM comments');
+$commentsStatement->execute();
+$comments = $commentsStatement->fetchAll();
 
 $africanrecipesStatement = $mysqlClient->prepare("SELECT * FROM recipes WHERE is_enabled is TRUE AND category = 'africain' ");
 $africanrecipesStatement->execute();

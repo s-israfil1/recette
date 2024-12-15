@@ -76,7 +76,6 @@ $recipe = $retrieveRecipeStatement->fetch(PDO::FETCH_ASSOC);
                         <textarea class="textera_update" placeholder="Seulement du contenu vous appartenant ou libre de droits." id="recipe" name="recipe"><?php echo $recipe['recipe']; ?></textarea>
                     </div>
                     <div class="formgroup_update">
-                        <input type="text" readonly id="oldImage" name="oldImage"  value="<?php echo($recipe['image']); ?>" />
                         <label for="recipe" >Image</label><br/>
                         <input type="file"  id="imageToUpload" name="imageToUpload" class="champs_update2"  />
                     </div>

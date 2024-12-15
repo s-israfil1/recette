@@ -50,19 +50,12 @@ if (
 
 $id = (int)$postData['id'];
 $title = trim(strip_tags($postData['title']));
-$oldImage = trim(strip_tags($postData['oldImage']));
+// $imageToUpload = trim(strip_tags($postData['imageToUpload']));
 $recipe = trim(strip_tags($postData['recipe']));
 $category = trim(strip_tags($postData['category']));
 $origin = trim(strip_tags($postData['origin']));
-if ($_FILES['imageToUpload']){
-    $image = strval($currTime) . trim(strip_tags($_FILES['imageToUpload']['name']));
-    /*if (isset($oldImage)) {
-        $uploadDir= 'upload/'
-        $destPath = 
-    }*/
-}else{
-    $image = $oldImage;
-}
+$image = strval($currTime) . trim(strip_tags($_FILES['imageToUpload']['name']));
+
 
 //faire le changement en base de donnee
 $insertRecipeStatement = $mysqlClient->prepare('UPDATE recipes SET title = :title, category = :category, origin = :origin, image = :image, recipe = :recipe WHERE recipe_id = :id');

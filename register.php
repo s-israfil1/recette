@@ -8,9 +8,10 @@
     <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
 <body class="body_register">
-    <header class="header_register">
+    <header>
         <div class="titleheader_register">
-            <h1><span>S</span>AVEURS <span>D</span>U <span>M</span>ONDE</h1>
+            <!-- <h1><span>S</span>AVEURS <span>D</span>U <span>M</span>ONDE</h1> -->
+            <?php require_once(__DIR__ . '/header.php'); ?>
         </div>
         <div class="txt_register">
             <p>

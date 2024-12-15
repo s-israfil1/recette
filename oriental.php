@@ -15,32 +15,49 @@ require_once(__DIR__ . '/functions.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oriental</title>
 </head>
-<body>
-<header>
+<body class="body_cat">
+    <header>
         <?php require_once(__DIR__ . '/header.php'); ?>
     </header>
     <main>
-        <section>
-            <h2>recettes Oriental</h2>
+        <section class="section_cat1">
+            <header>
+                <?php require_once(__DIR__ . '/header.php'); ?>
+            </header>
+            <div class="title_cat">
+                <h2>Recettes Orientale</h2>
+            </div>
+            <div class="txt_cat1">
+                <p>
+                    <span>B</span>ienvenue dans le monde des recettes orientales ! ✨
+                </p>
+            </div>
+            <div class="txt_cat2">
+                <p>
+                    Nous sommes enchantés de vous accueillir dans notre section dédiée aux saveurs envoûtantes de l'Orient. 
+                    Que vous soyez un passionné de cuisine ou simplement curieux de découvrir de nouvelles saveurs, vous 
+                    êtes au bon endroit !
+                </p>
+            </div>
         </section>
-        <section>
-            <div class="boite_index1">
+        <section class="section_cat2">
+            <div class="boite_cat">
                 <?php foreach (getRecipes($orientalrecipes) as $recipe) : ?>
-                    <article class="article_index">
+                    <article class="article_cat">
                         <div class="title_recipe">
                             <h3><a class="trecipe" href="recipes_read.php?id=<?php echo($recipe['recipe_id']); ?>"><?php echo($recipe['title']); ?></a></h3>
                         </div>
-                        <div class="recipe"><?php echo $recipe['recipe']; ?></div>
+                        <div class="recipe"><?php echo $recipe['origin']; ?></div>
                         <div class="author_recipe">
                             <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
                         </div>
                         <?php if (isset($_SESSION['LOGGED_USER']) && $recipe['author'] === $_SESSION['LOGGED_USER']['email']) : ?>
                             <div class="action_recipe">
-                                <div class="formgroup_index">
-                                    <a class="bouton_edit1" href="recipes_update.php?id=<?php echo($recipe['recipe_id']); ?>">Modifier l'article</a>
+                                <div class="formgroup_cat">
+                                    <a class="bouton_edit1" href="recipes_update.php?id=<?php echo($recipe['recipe_id']); ?>">Modifier Recette</a>
                                 </div>
-                                <div class="formgroup_index">
-                                    <a class="bouton_edit2" href="recipes_delete.php?id=<?php echo($recipe['recipe_id']); ?>">Supprimer l'article</a>
+                                <div class="formgroup_cat">
+                                    <a class="bouton_edit2" href="recipes_delete.php?id=<?php echo($recipe['recipe_id']); ?>">Supprimer Recette</a>
                                 </div>
                             </div>
                         <?php endif; ?>

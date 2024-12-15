@@ -70,20 +70,32 @@ foreach ($recipeWithComments as $comment) {
             <h2><?php echo($recipe['title']); ?></h2>
         </div>
         <section class="section_recread0">
-            <article>
+            <article class="formgroup_orirec">
+                <div class="titleorig">
+                    <h4><span>O</span>rigin De La Recette</h4>
+                </div>
+                <div class="orig">
+                    <p><?php echo($recipe['origin']); ?></p>
+                    <p>La recette est décrite ci-dessous</p>
+                </div>
+            </article>
+            <article class="formgroup_imgrec">
                 <?php 
                 $image_name = $recipe['image'];
                 $image_path = 'uploads/' . $image_name;
-                
                 ?>
-                <img src="<?php echo htmlspecialchars($image_path); ?>"/>
-            </article>
-            <article>
-                <?php echo($recipe['origin']); ?>
+                <img src="<?php echo htmlspecialchars($image_path); ?>" class="img_rec"/>
             </article>
         </section>
         <section class="section_recread1">
             <div class="boite_recread1">
+                <ul>
+                    <li>
+                        <div class="titleorig">
+                            <h6>Description de la <span>R</span>ecette</h6>
+                        </div>
+                    </li>
+                </ul>
                 <article class="formgroup_recread">
                     <?php echo($recipe['recipe']); ?>
                 </article>
@@ -93,18 +105,18 @@ foreach ($recipeWithComments as $comment) {
             </div>
         </section>
         <section class="section_recread2">
-            <div>
-                <p>
-                    Pour nous contacter, cliquez sur le lien ci-dessous :
+            <div class="div_recread2">
+                <p class="txt_recread2">
+                    -Pour nous contacter, cliquez sur le lien ci-dessous :
                 </p>
             </div>
-            <div>
-                <a href="mailto:<?php echo($recipe['author']); ?>?subject=Partage de recette&body=Bonjour,%0A%0A">
+            <div class="div_recread2">
+                <a href="mailto:<?php echo($recipe['author']); ?>?subject=Partage de recette&body=Bonjour,%0A%0A" class="bouton_recread">
                     Envoyer un  email
                 </a>
             </div>
         </section>
-        <section class="section_recread2">
+        <section class="section_comm">
             <div class="title_recread2">
                 <h3>COMMENTAIRES...</h3>
             </div>

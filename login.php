@@ -13,11 +13,13 @@
             <link href="style/partage_recettes.css" rel="stylesheet">
         </head>
         <body class="body_login">
-            
-            <header class="header_login">
-                <div class="titleheader_login">
-                    <h1><span>S</span>AVEURS <span>D</span>U <span>M</span>ONDE</h1>
+            <section class="sectionlogin0">
+                <div class="visite">
+                    <a href="index.php" class="lrejoindre1">Visiter la plateforme</a>
                 </div>
+            </section>
+            <header class="header_login">
+                
                 <div class="txt_login">
                     <p>
                         Bienvenue dans l'univers des saveurs.
@@ -65,6 +67,7 @@
                             </div>
                         </div>
                 </section>
+                
             </main>
             <footer>
                 <!-- inclusion du bas de page du site -->
