@@ -13,11 +13,13 @@
             <link href="style/partage_recettes.css" rel="stylesheet">
         </head>
         <body class="body_login">
-            
-            <header class="header_login">
-                <div class="titleheader_login">
-                    <h1><span>S</span>AVEURS <span>D</span>U <span>M</span>ONDE</h1>
+            <section class="sectionlogin0">
+                <div class="visite">
+                    <a href="index.php" class="lrejoindre1">Visiter la plateforme</a>
                 </div>
+            </section>
+            <header class="header_login">
+                
                 <div class="txt_login">
                     <p>
                         Bienvenue dans l'univers des saveurs.
@@ -59,17 +61,32 @@
                                 <button type="submit" class="bouton_login">Connexion</button>
                             </div>
                         </form>
-                            <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
-
-                        
                     </div>
                 </section>
+                <section class="sectionregister2">
+                        <div class="redirect">
+                            <div class="boiteredirect">
+                                <p class="txtredirect">Vous n'avez pas de <u>compte</u> ?</p>
+                            </div>
+                            <div class="boiteredirect">
+                                <a href="register.php" class="boutonredirect">Creer un compte ici</a>
+                            </div>
+                        </div>
+                </section>
+                
             </main>
             <footer>
                 <!-- inclusion du bas de page du site -->
                 <?php require_once(__DIR__ . '/footer.php'); ?>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, minus? Corrupti praesentium dolor mollitia dignissimos reprehenderit modi sunt laboriosam doloremque, neque rem sed earum, magni unde eaque ad obcaecati quos.
             </footer>
+                <!-- Si utilisateur/trice bien connectée on affiche un message de succès -->
+                <?php else : ?>
+                            <div class="boite_alert">
+                                <div class="alert_success" role="alert">
+                                    Bonjour <?php echo $_SESSION['LOGGED_USER']['name']; ?> et bienvenue dans votre espace culinaire !
+                                </div>
+                            </div>
+                <?php endif; ?>
         </body>
     </html>
-<?php endif; ?>

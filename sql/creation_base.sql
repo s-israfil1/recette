@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS `users` (
     `age` INT NOT NULL,
     PRIMARY KEY (`user_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    
 
 delete from `users`;
 insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (34, 'mickael.andrieu@exemple.com', 'Mickaël Andrieu', 'devine', 1);

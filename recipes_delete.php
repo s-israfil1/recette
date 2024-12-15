@@ -22,27 +22,34 @@ if (!isset($getData['id']) || !is_numeric($getData['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Recettes - Supprimer la recette ?</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <div class="container">
-
+<body class="body_delete">
+    <header>
         <?php require_once(__DIR__ . '/header.php'); ?>
-        <h1>Supprimer la recette ?</h1>
-        <form action="recipes_post_delete.php" method="POST">
-            <div class="mb-3 visually-hidden">
-                <label for="id" class="form-label">Identifiant de la recette</label>
-                <input type="hidden" class="form-control" id="id" name="id" value="<?php echo $getData['id']; ?>">
+    </header>
+
+    <main>
+        <div class="title_delete">
+            <h2>Suprimer la recette ?</h2>
+        </div>
+        <section class="section_delete">
+            <div class="form_delete">
+                <form action="recipes_post_delete.php" method="POST">
+                    <div class="formgroup_delete">
+                        <label for="id"><strong>Identifiant de la recette</strong></label><br>
+                        <input type="hidden" id="id" name="id" value="<?php echo $getData['id']; ?>">
+                    </div>
+                    <div class="formgroup_delete">
+                        <button type="submit" class="bouton_delete">La suppression est définitive</button>
+                    </div>
+                </form>
             </div>
+        </section>
+    </main>
 
-            <button type="submit" class="btn btn-danger">La suppression est définitive</button>
-        </form>
-        <br />
-    </div>
-
-    <?php require_once(__DIR__ . '/footer.php'); ?>
+    <footer>
+        <?php require_once(__DIR__ . '/footer.php'); ?>
+    </footer>
 </body>
 </html>

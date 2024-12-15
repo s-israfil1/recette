@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(15, 63, 63);
+}
+
+span {
+    color: yellow;
+    font-size: 1.86em;
+    font-family: Kablammo;
+}
+
+h1 {
+    font-family: Kablammo;
+    color: white;
+}
+
+h2 {
+    color: white;
+    background: linear-gradient(155deg, rgb(0, 0, 0), rgb(255, 255, 255));
+    font-size: 3.6em;
+    padding-left: 36.66px;
+}
+
+h3 {
+    color: white;
+    background: linear-gradient(155deg, rgb(0, 0, 0), rgb(255, 255, 255));
+    font-size: 2.6em;
+    padding-left: 36.66px;
+}
+
+.head_land {
+    background-color: rgb(49, 47, 47);
+}
+
+.section1_land {
+    width: 100%;
+    height: 60vh;
+    background-image: url("../images/fadmin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section2_land {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    display: flex;
+    justify-content: space-around;
+    padding: 36.6px 36px 66px 36px;
+}
+
+.boite_land {
+    color: #123;
+    background-color: white;
+    text-align: center;
+    border-radius: 16px 16px 16px 16px;
+    padding: 36px 6px 6px 6px;
+    width: 236px;
+    height: 210px;
+}
+
+.logo_man {
+    /* background-color: orange; */
+    margin: 10px 0px 16px 0px;
+}
+
+.txt_logoman {
+    color: rgb(15, 63, 63);
+    /* background-color: blue; */
+    font-size: 1.36em;
+    padding: 6px;
+    margin: 10px 0px 10px 0px;
+}
+
+hr {
+    color: white;
+}
+
+.head_manuser {
+    background-color: rgb(49, 47, 47);
+}
+
+.section1_manuser {
+    /* background-color: violet;  */
+    padding: 6px 0px 6px 0px;
+    margin: 16px 0px 16px 0px;
+}
+
+.section2_manuser {
+    background-color: white;
+    border-radius: 16px 16px 16px 16px;
+    padding: 66px 60px 60px 60px;
+}
+
+.th_manuser {
+    color: white;
+    background-color: rgb(49, 47, 47);
+}
+
+table,
+th,
+td {
+    border: rgb(49, 47, 47) 1.36px solid;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 1.36em;
+    padding: 10.6px 0px 10.6px 0px;
+}
+
+.table_manuser {
+    box-shadow: 3.6px 3.6px 16.6px black;
+}
+
+td {
+    /* text-align: center; */
+    font-size: 1.16em;
+}
+
+.ta_manuser {
+    padding: 10px 0px 6.6px 16.6px;
+}
+
+.tdact_manuser {
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px 6.6px 0px;
+}
+
+.lact1_manuser {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    text-decoration: none;
+    padding: 6px 16.6px 6px 16.6px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.lact2_manuser {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    text-decoration: none;
+    padding: 6px 16.6px 6px 16.6px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid red;
+}
+
+.head_manrec {
+    background-color: rgb(49, 47, 47);
+}
+
+.section1_manrec {
+    padding: 6px 0px 6px 0px;
+    margin: 16px 0px 16px 0px;
+}
+
+.section2_manrec {
+    background-color: white;
+    border-radius: 16px 16px 16px 16px;
+    padding: 66px 60px 60px 60px;
+}
+
+.th_manrec {
+    color: white;
+    background-color: rgb(49, 47, 47);
+}
+
+.ta_manrec {
+    padding: 10px 0px 6.6px 16.6px;
+}
+
+.tdact_manrec {
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px 6.6px 0px;
+}
+
+.lact1_manrec {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    text-decoration: none;
+    padding: 6px 16.6px 6px 16.6px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.lact2_manrec {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    text-decoration: none;
+    padding: 6px 16.6px 6px 16.6px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid red;
+}
+
+.table_manrec {
+    box-shadow: 3.6px 3.6px 16.6px black;
+}
+
+.section1_mancom {
+    /* background-color: violet; */
+    padding: 6px 0px 6px 0px;
+    margin: 16px 0px 16px 0px;
+}
+
+.head_mancom {
+    background-color: rgb(49, 47, 47);
+}
+
+.section2_mancom {
+    background-color: white;
+    border-radius: 16px 16px 16px 16px;
+    padding: 66px 60px 60px 60px;
+}
+
+.table_mancom {
+    box-shadow: 3.6px 3.6px 16.6px black;
+}
+
+.th_mancom {
+    color: white;
+    background-color: rgb(49, 47, 47);
+}
+
+.ta_mancom {
+    padding: 10px 0px 6.6px 16.6px;
+}
+
+.tdact_mancom {
+    /* background-color: brown; */
+    text-align: center;
+    padding: 16px 0px 16px 0px;
+}
+
+.lact_mancom {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    text-decoration: none;
+    padding: 6.6px 20.6px 6.6px 20.6px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid red;
+}
+
+.head_edRec {
+    background-color: rgb(49, 47, 47);
+}
+
+.section1_edRec {
+    /* background-color: violet; */
+    padding: 6px 0px 6px 0px;
+    margin: 16px 0px 16px 0px;
+}
+
+.section2_edRec {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 66px 0px 60px 0px;
+}
+
+.boite_edRec {
+    color: black;
+    /* background-color: wheat; */
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 1.6px 1.6px 13.6px rgb(15, 63, 63);
+    width: 100%;
+    max-width: 886px;
+    padding: 36px 26px 26px 26px;
+}
+
+.formgroup_edRec {
+    margin: 6px 0px 16px 0px;
+    padding: 6px;
+}
+
+.champs_edRec {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 836px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 16px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 16px;
+    font-size: 18.6px;
+    border: 0px solid white;
+    border-radius: 6px;
+    margin: 16px 0px 6px 0px;
+}
+
+.select_edRec {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    font-size: 18.6px;
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 866px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 60px;
+    /* Hauteur fixe pour les champs de texte */
+    border: 0px solid white;
+    border-radius: 6px;
+    margin: 16px 0px 6px 0px;
+}
+
+.textera_edRec2 {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 866px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 266px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 0px solid white;
+    border-radius: 6px;
+    margin: 16px 0px 6px 0px;
+    ;
+    font-size: 18.6px;
+}
+
+.textera_edRec1 {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    width: 100%;
+    /* Fixe la largeur de la zone de texte à 100% de son conteneur */
+    max-width: 866px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 136.6px;
+    /* Hauteur fixe pour la zone de texte */
+    padding: 10px;
+    border: 0px solid white;
+    border-radius: 6px;
+    margin: 16px 0px 6px 0px;
+    font-size: 18.6px;
+    resize: none;
+}
+
+.bouton_edRec {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    border-radius: 50px 50px 50px 50px;
+    border: 2.6px solid white;
+    padding: 16px 36px;
+    font-size: 18.6px;
+    cursor: pointer;
+}
+
+.baschamps {
+    font-size: 0.86em;
+    font-style: italic;
+}
+
+.head_edUser {
+    background-color: rgb(49, 47, 47);
+}
+
+.section1_edUser {
+    /* background-color: violet;h */
+    padding: 6px 0px 6px 0px;
+    margin: 16px 0px 16px 0px;
+}
+
+.section2_edUser {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 66px 0px 60px 0px;
+}
+
+.boite_edUser {
+    color: black;
+    /* background-color: rgb(253, 243, 223); */
+    font-size: 1.26em;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 1.6px 1.6px 13.6px rgb(15, 63, 63);
+    width: 100%;
+    max-width: 886px;
+    padding: 36px 26px 26px 26px;
+}
+
+.formgroup_edUser {
+    margin: 6px 0px 16px 0px;
+    padding: 6px;
+}
+
+.champs_edUser {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    width: 100%;
+    /* Fixe la largeur des champs à 100% de leur conteneur */
+    max-width: 600px;
+    /* Largeur maximale pour éviter l'élargissement excessif */
+    height: 16px;
+    /* Hauteur fixe pour les champs de texte */
+    padding: 16px;
+    font-size: 18.6px;
+    border: 0px solid white;
+    border-radius: 6px;
+    margin: 16px 0px 6px 0px;
+}
+
+.bouton_edUser {
+    color: white;
+    background-color: rgb(15, 63, 63);
+    border-radius: 50px 50px 50px 50px;
+    border: 2.6px solid white;
+    padding: 16px 36px;
+    font-size: 18.6px;
+    cursor: pointer;
+}

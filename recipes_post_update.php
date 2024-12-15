@@ -10,7 +10,32 @@ require_once(__DIR__ . '/databaseconnect.php');
  * ces données doivent être testées et vérifiées.
  */
 $postData = $_POST;
+$currTime = time();
 
+//testons si le fichier a bien ete envoye et d'erreur
+
+if(isset($_FILES['imageToUpload'])) {
+    
+    //testons si le fichier n'est pas troip gros
+    if($_FILES['imageToUpload']['size'] <= 10000000000) {
+
+        // testons si l'extension est authorisee
+        $fileinfo = pathinfo($_FILES['imageToUpload']['name']);
+        $extension = $fileinfo['extension'];
+        $allowedExtension = ['jpg', 'jpeg', 'gif', 'png'];
+
+        if(!in_array($extension, $allowedExtension)) {
+            echo "l'extension n'est pas autoriser";
+        } else {
+            //on peut valider le fichier et le stocker definitivement
+            move_uploaded_file($_FILES['imageToUpload']['tmp_name'], 'uploads/'  . strval($currTime). basename($_FILES['imageToUpload']['name']));    
+        }
+    }
+}
+
+//strval($currenttime = comme en haut et dans les ligne c'est pour donner une temps unique pour aue le meme fichier soit envoyer sans etre ecraser )
+
+// Vérification du formulaire soumis
 if (
     !isset($postData['id'])
     || !is_numeric($postData['id'])
@@ -25,11 +50,20 @@ if (
 
 $id = (int)$postData['id'];
 $title = trim(strip_tags($postData['title']));
+// $imageToUpload = trim(strip_tags($postData['imageToUpload']));
 $recipe = trim(strip_tags($postData['recipe']));
+$category = trim(strip_tags($postData['category']));
+$origin = trim(strip_tags($postData['origin']));
+$image = strval($currTime) . trim(strip_tags($_FILES['imageToUpload']['name']));
 
-$insertRecipeStatement = $mysqlClient->prepare('UPDATE recipes SET title = :title, recipe = :recipe WHERE recipe_id = :id');
+
+//faire le changement en base de donnee
+$insertRecipeStatement = $mysqlClient->prepare('UPDATE recipes SET title = :title, category = :category, origin = :origin, image = :image, recipe = :recipe WHERE recipe_id = :id');
 $insertRecipeStatement->execute([
     'title' => $title,
+    'category' => $category,
+    'origin' => $origin,
+    'image' => $image,
     'recipe' => $recipe,
     'id' => $id,
 ]);
@@ -43,26 +77,33 @@ $insertRecipeStatement->execute([
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Recettes - Création de recette</title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="style/partage_recettes.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <div class="container">
-
+<body class="body_postupdate">
+    <header>
         <?php require_once(__DIR__ . '/header.php'); ?>
-        <h1>Recette modifiée avec succès !</h1>
-
-        <div class="card">
-
-            <div class="card-body">
-                <h5 class="card-title"><?php echo($title); ?></h5>
-                <p class="card-text"><b>Email</b> : <?php echo $_SESSION['LOGGED_USER']['email']; ?></p>
-                <p class="card-text"><b>Recette</b> : <?php echo $recipe; ?></p>
-            </div>
+    </header>
+    <main>
+        <div class="title_postupdate">
+            <!-- MESSAGE DE SUCCES -->
+            <h2>Recette modifiée avec succès !</h2>
         </div>
-    </div>
-    <?php require_once(__DIR__ . '/footer.php'); ?>
+        <section class="section_postupdate">
+            <div class="boite_postupdate">
+                <ul>
+                    <li><h5><em><?php echo($title); ?></em></h5></li>
+                </ul>
+                <div class="">
+                    <p class="txt_postupdate"><b>Email</b> : <?php echo $_SESSION['LOGGED_USER']['email']; ?></p>
+                    <p class="txt_postupdate"><b>Recette</b> : <?php echo $recipe; ?></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <?php require_once(__DIR__ . '/footer.php'); ?>
+    </footer>
+    
 </body>
 </html>
